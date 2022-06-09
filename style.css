@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik', sans-serif;
+}
+
+body {
+  background: url(https://img.freepik.com/vetores-gratis/fundo-futurista-colorido-com-particulas-brilhantes_52683-42650.jpg?size=626&ext=jpg&uid=R20229492&ga=GA1.2.1895568287.1654264740)
+    no-repeat center;
+  background-size: cover;
+
+  color: white;
+  text-align: center;
+  height: 100%;
+}
+
+img {
+  width: 100px;
+}
+
+#container {
+  margin-top: 100px;
+  width: 100%;
+  max-width: 400px;
+  margin-inline: auto;
+}
+
+h1 {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 40px;
+}
+
+input,
+button {
+  display: block;
+  padding: 20px;
+
+  font-size: 20px;
+  border-radius: 5px;
+  border: none;
+}
+
+input {
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+button {
+  background-color: green;
+  color: white;
+  transition: filter 0.2s;
+  width: 100%;
+  margin-bottom: 90px;
+}
+
+button:hover {
+  filter: brightness(1.2);
+  cursor: pointer;
+}
