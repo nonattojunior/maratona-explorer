@@ -2,26 +2,54 @@
 //dados de entrada
 //dados de saída
 const elementoResposta = document.querySelector("#resposta")
+
+const inputPergunta = document.querySelector ("#inputPergunta")
+
+const buttonPerguntar = document.querySelector("#buttonPerguntar")
+
 const respostas = [
-  "Não",
-  "Provavelmente",
-  "Sim",
-  "Definitivamente sim",
-  "Definitivamente não"
+  "Certeza!" ,
+  "Não tenho tanta certeza." ,
+  "É decididamente assim." ,
+  "Não conte com isso." ,
+  "Sem dúvidas!" ,
+  "Pergunte novamente mais tarde." ,
+  "Sim, definitivamente!" ,
+  "Minha resposta é não." ,
+  "Você pode contar com isso." ,
+  "Melhor não te dizer agora." ,
+  "A meu ver, sim." ,
+  "Minhas fontes dizem não." ,
+  "Provavelmente." ,
+  "Não é possível prever agora." ,
+  "Perspectiva boa." ,
+  "As perspectivas não são tão boas." ,
+  "Sim." ,
+  "Concentre-se e pergunte novamente." ,
+  "Sinais apontam que sim." ,
 ]
-const inputPergunta = document.querySelector("#inputPergunta")
 
 function fazerPergunta() {
 
-  if(inputPergunta.value == "") {
-    alert("Digite sua pergunta")
+  if( inputPergunta.value == "" ) {
+    alert ( "Digite sua pergunta" )
     return
   }
 
-  const totalRespostas = respostas.length
-  const numeroAleatorio = Math.floor(math.random() * totalRespostas) 
+  buttonPerguntar.setAttribute("disabled", true)
 
-  elementoResposta.innerHTML = respostas[numeroAleatorio]
+  const pergunta = "<div>" + inputPergunta.value + "</div>"
+
+  const totalRespostas =  respostas.length
+  const numeroAleatorio = Math.floor(Math.random() * totalRespostas) 
+
+  elementoResposta.innerHTML = pergunta + respostas[numeroAleatorio]
+
+  elementoResposta.style.opacity = 1
+
+  setTimeout(function() {
+    elementoResposta.style.opacity = 0; buttonPerguntar.removeAttribute("disabled")
+  }, 3000)
 
 
 }

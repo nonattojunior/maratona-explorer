@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   font-family: 'Rubik', sans-serif;
+  box-sizing: border-box;
 }
 
 body {
@@ -42,6 +43,7 @@ input,
 button {
   display: block;
   padding: 20px;
+  width: 100%;
 
   font-size: 20px;
   border-radius: 5px;
@@ -50,7 +52,6 @@ button {
 
 input {
   margin-bottom: 20px;
-  width: 90%;
 }
 
 button {
@@ -58,7 +59,7 @@ button {
   color: white;
   transition: filter 0.2s;
   width: 100%;
-  margin-bottom: 90px;
+  margin-bottom: 30px;
 }
 
 button:hover {
@@ -68,6 +69,7 @@ button:hover {
 
 #resposta {
   margin-top: 30px;
+  transition: opacity 1s;
 }
 
 #resposta div {
